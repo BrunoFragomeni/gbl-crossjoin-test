@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL81Dialect 
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+          
+  datasource:
+    url: jdbc:postgresql://localhost:5432/storeProduct
+    username: store_product_user
+    password: 1234
+    
+  jackson:
+    date-format: yyyy-MM-dd
+    deserialization:
+      fail-on-unknown-properties: false  
+
+server:
+  port: 8080
+  max-http-header-size: 32000
